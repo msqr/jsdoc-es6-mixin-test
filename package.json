@@ -7,9 +7,10 @@
   "author": "Matt Magoffin <git+matt@msqr.us>",
   "license": "MIT",
   "devDependencies": {
-    "jsdoc": "^3.5.3"
+    "jsdoc": "jsdoc3/jsdoc#releases/3.5"
   },
   "scripts": {
     "apidoc": "jsdoc --package package.json --recurse --destination build/apidoc src"
-  }
+  },
+  "dependencies": {}
 }

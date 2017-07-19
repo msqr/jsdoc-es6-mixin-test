@@ -1,12 +1,26 @@
+
+/**
+ * Create a mixin class.
+ *
+ * @exports testmixin
+ * @param {*} superclass - The class to mix onto.
+ * @return {module:testmixin~mixin} The mixin class.
+ */
+const TestMixin = (superclass) => 
+
 /**
  * A mixin.
- * 
- * @param {*} superclass the class to mix onto 
+ *
  * @mixin
- * @property {string} myProp a string property
+ * @alias module:testmixin~mixin
  */
-const TestMixin = (superclass) => class extends superclass {
+class extends superclass {
 
+    /**
+     * A string property.
+     *
+     * @type {string}
+     */
     get myProp() {
         return this._myProp;
     }
@@ -16,17 +30,14 @@ const TestMixin = (superclass) => class extends superclass {
     }
 
     /**
-     * Get 2nd property.
-     * @returns {string} the 2nd property
+     * 2nd property.
+     *
+     * @type {string}
      */
     get myProp2() {
         return this._myProp2;
     }
 
-    /**
-     * Set 2nd property.
-     * @param {string} val the value to set
-     */
     set myProp2(val) {
         this._myProp2 = val;
     }
@@ -35,8 +46,7 @@ const TestMixin = (superclass) => class extends superclass {
 	 * Do something.
 	 * 
 	 * @param {boolean} param important parameter
-	 * @returns {string} the base URL to SolarUser
-	 * @memberof TestMixin#
+	 * @returns {string} the answer
 	 */
 	doSomething(param) {
         console.log('param =', param);
